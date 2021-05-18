@@ -1,0 +1,12 @@
+button{
+    margin: 10px;
+}
+#upvote{
+    background-color: hsl(187, 80%, 26%);
+}
+#downvote{
+background-color: rgb(56, 71, 187);
+}
+#delete{
+    background-color: red;
+}

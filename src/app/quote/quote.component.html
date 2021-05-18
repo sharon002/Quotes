@@ -1,0 +1,31 @@
+<div class=container>
+    <div class=jumbotron>
+        <h1>Quotes ot the week</h1>
+    </div>
+    <hr>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <app-quote-form (addQuote)='addQuote($event)'></app-quote-form>
+        </div>
+        <div class="col-md-7">
+            <div class=jumbotron id="quotes">
+                <ul>
+                    <li *ngFor='let quote of quotes; let i = index'>
+                        <button (click)='showDetails(i)' appHighlight *ngIf='i === 0 &&  quote.upvote > 0'
+                            style="background-color:#C4C4C4 ; border: 0ch;">{{quote.quote}}</button>
+                        <button (click)='showDetails(i)' *ngIf='i === 0 &&  quote.upvote === 0'
+                            style="background-color:#C4C4C4 ; border: 0ch;">{{quote.quote}}</button>
+                        <button (click)='showDetails(i)' *ngIf='i !== 0'
+                            style="background-color:#C4C4C4 ; border: 0ch;">{{quote.quote}}</button>
+                        <app-quote-detail (upVote)='upVote($event, i)' (downVote)='downVote($event, i)'
+                            (quotesDelete)='deleteQuotes($event, i)' *ngIf='quote.describe' [quote]='quote'>
+                        </app-quote-detail>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>

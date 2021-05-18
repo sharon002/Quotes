@@ -1,0 +1,13 @@
+<hr>
+<p>Author: {{quote.author}}</p>
+<p>Added by: {{quote.name}}</p>
+<p>Created {{quote.create|time}} days ago</p>
+<button class="details" id="upvote" (click)='quoteUpvote(true)'>
+    UPVOTE {{quote.upvote}}
+</button>
+<button class="details" id="downvote" (click)='quoteDownvote(true)'>
+    DOWNVOTE {{quote.downvote}}
+</button>
+<button class="details" id="delete" (click)='quoteDelete(true)'>
+    DELETE
+</button>
