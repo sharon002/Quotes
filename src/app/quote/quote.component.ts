@@ -18,6 +18,7 @@ export class QuoteComponent implements OnInit {
     // 
     new Quote(1, 'sharon', 'It does not matter how slow you go as long as you do not stop.', 'Chekhov', new Date(2020, 5, 6)),
     new Quote(2, 'Barclay', 'Every thing you can imagine is real.', 'Chekhov', new Date(2016, 5, 6)),
+    new Quote(4, 'Boyd', "Whatever you do ,do it well.", ' Leo Tolstoy , Anna Karenina', new Date(2018, 5, 6))
 
   ];
   showDetails(index: string | number) {
